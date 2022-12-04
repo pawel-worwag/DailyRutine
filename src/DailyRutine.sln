@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyRutine.Domain", "Daily
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyRutine.Application", "DailyRutine.Application\DailyRutine.Application.csproj", "{141BF14F-51AF-4C6B-B957-16FC823DD93B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyDomain.Persistance", "DailyDomain.Persistance\DailyDomain.Persistance.csproj", "{BCE567DE-5578-493F-AEDA-757ACBE85198}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{141BF14F-51AF-4C6B-B957-16FC823DD93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{141BF14F-51AF-4C6B-B957-16FC823DD93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{141BF14F-51AF-4C6B-B957-16FC823DD93B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE567DE-5578-493F-AEDA-757ACBE85198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE567DE-5578-493F-AEDA-757ACBE85198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE567DE-5578-493F-AEDA-757ACBE85198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE567DE-5578-493F-AEDA-757ACBE85198}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
