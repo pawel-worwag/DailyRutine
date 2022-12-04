@@ -9,5 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DailyRutine.Domain\DailyRutine.Domain.csproj" />
+    <ProjectReference Include="..\DailyRutine.Api\DailyRutine.Shared\DailyRutine.Shared.csproj" />
   </ItemGroup>
 </Project>
