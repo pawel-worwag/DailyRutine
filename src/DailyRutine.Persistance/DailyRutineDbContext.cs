@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Reflection;
 using DailyRutine.Application;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DailyRutine.Persistance
 {
-    public class DailyRutineDbContext : DbContext,IDailyRutineDbContext
+    public class DailyRutineDbContext : IdentityDbContext<IdentityUser>,IDailyRutineDbContext
     {
         public DailyRutineDbContext(DbContextOptions<DailyRutineDbContext> options) : base(options)
         {
