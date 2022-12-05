@@ -7,6 +7,10 @@ namespace DailyRutine.Persistance
 {
     public class DailyRutineDbContext : DbContext,IDailyRutineDbContext
     {
+        public DailyRutineDbContext(DbContextOptions<DailyRutineDbContext> options) : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
