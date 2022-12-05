@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DailyRutine.Persistance</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DailyRutine.Domain\DailyRutine.Domain.csproj" />
+    <ProjectReference Include="..\DailyRutine.Application\DailyRutine.Application.csproj" />
+  </ItemGroup>
+</Project>

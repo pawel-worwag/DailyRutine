@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "Womv8RMl+1gF3HyojyF6XWGw7cOJMyy/iTG6/YFGDuoTG2v9iXTCZUU7A+peX+Gf8gx1GWehwfpnBq7EpBrQkw==",
+  "success": true,
+  "projectFilePath": "/Users/pawelworwag/Projects/DailyRutine/src/DailyRutine.Components/DailyRutine.Components.csproj",
+  "expectedPackageFiles": [
+    "/Users/pawelworwag/.nuget/packages/microsoft.aspnetcore.authorization/7.0.0/microsoft.aspnetcore.authorization.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.aspnetcore.components/7.0.0/microsoft.aspnetcore.components.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.aspnetcore.components.analyzers/7.0.0/microsoft.aspnetcore.components.analyzers.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.aspnetcore.components.forms/7.0.0/microsoft.aspnetcore.components.forms.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.aspnetcore.components.web/7.0.0/microsoft.aspnetcore.components.web.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.aspnetcore.metadata/7.0.0/microsoft.aspnetcore.metadata.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/microsoft.jsinterop/7.0.0/microsoft.jsinterop.7.0.0.nupkg.sha512",
+    "/Users/pawelworwag/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
