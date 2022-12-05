@@ -1,4 +1,5 @@
-﻿using DailyRutine.Persistance;
+﻿using DailyRutine.Application;
+using DailyRutine.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddPersistenceLayer(builder.Configuration);
+builder.Services.AddApplicationLayer();
 
 var app = builder.Build();
 

@@ -11,4 +11,18 @@
     <ProjectReference Include="..\DailyRutine.Domain\DailyRutine.Domain.csproj" />
     <ProjectReference Include="..\DailyRutine.Api\DailyRutine.Shared\DailyRutine.Shared.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Users\" />
+    <None Remove="Users\GetUsers\" />
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Users\" />
+    <Folder Include="Users\GetUsers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
 </Project>
