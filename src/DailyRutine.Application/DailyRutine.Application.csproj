@@ -9,13 +9,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DailyRutine.Domain\DailyRutine.Domain.csproj" />
-    <ProjectReference Include="..\DailyRutine.Api\DailyRutine.Shared\DailyRutine.Shared.csproj" />
+    <ProjectReference Include="..\DailyRutine.Shared\DailyRutine.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Users\" />
     <None Remove="Users\GetUsers\" />
     <None Remove="MediatR" />
     <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.EntityFrameworkCore.Abstractions" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
@@ -24,5 +28,9 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
   </ItemGroup>
 </Project>

@@ -28,7 +28,7 @@
     <ProjectReference Include="..\DailyRutine.Persistance\DailyRutine.Persistance.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="DailyRutine.Shared\DailyRutine.Shared.csproj">
+    <ProjectReference Include="..\DailyRutine.Shared\DailyRutine.Shared.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
