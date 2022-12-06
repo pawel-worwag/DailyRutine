@@ -7,4 +7,12 @@
     <RootNamespace>DailyRutine.Shared</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Users\" />
+    <None Remove="Users\GetUsers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Users\" />
+    <Folder Include="Users\GetUsers\" />
+  </ItemGroup>
 </Project>
