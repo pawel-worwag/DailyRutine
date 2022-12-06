@@ -20,10 +20,12 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.AspNetCore.Identity" />
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Users\AddUser\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
     <Folder Include="Users\GetUsers\" />
+    <Folder Include="Users\AddUser\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="11.1.0" />

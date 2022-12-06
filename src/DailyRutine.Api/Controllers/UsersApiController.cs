@@ -19,6 +19,12 @@ namespace DailyRutine.Api.Controllers
         {
             return await _mediator.Send(new Application.Users.GetUsers.GetUsersRequest() { Take = Take, Skip = Skip });
         }
+
+        [HttpPost]
+        public async Task<ActionResult<string>> AddUser(Shared.Users.AddUser.AddUserVm dto)
+        {
+            return await _mediator.Send(new Application.Users.AddUser.AddUserRequest() { Dto = dto });
+        }
     }
 }
 
