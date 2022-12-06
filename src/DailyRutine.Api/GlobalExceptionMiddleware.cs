@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using DailyRutine.Shared.Exceptions;
 
 namespace DailyRutine.Api
 {
@@ -19,7 +20,13 @@ namespace DailyRutine.Api
             {
                 await _next(context);
             }
-            catch(Exception ex)
+            catch(Error400Exception ex)
+            {
+                _logger.LogError($"[{context.TraceIdentifier}] {ex.Message}");
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                await context.Response.WriteAsJsonAsync(ex.Message);
+            }
+            catch (Exception ex)
             {
                 _logger.LogError($"[{context.TraceIdentifier}] {ex.Message}");
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;

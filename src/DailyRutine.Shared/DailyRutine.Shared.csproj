@@ -11,10 +11,12 @@
     <None Remove="Users\" />
     <None Remove="Users\GetUsers\" />
     <None Remove="Users\AddUser\" />
+    <None Remove="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
     <Folder Include="Users\GetUsers\" />
     <Folder Include="Users\AddUser\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 </Project>

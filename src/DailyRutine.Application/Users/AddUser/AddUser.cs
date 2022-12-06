@@ -1,6 +1,7 @@
 ﻿using System;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DailyRutine.Application.Users.AddUser
 {
@@ -23,19 +24,14 @@ namespace DailyRutine.Application.Users.AddUser
             if (request.Dto is null) { throw new ArgumentNullException("User dto in null"); }
             IdentityUser user = MapToUser(request.Dto);
             var result = await userManager.CreateAsync(user);
-            if(result.Succeeded)
+            if(!result.Succeeded)
             {
-                return user.Id;
-            }
-            else
-            {
-                string message = "";
-                foreach(var error in result.Errors)
+                foreach (var error in result.Errors)
                 {
-                    message += error.Description;
+                    throw MapException(error);
                 }
-                throw new Exception(message);
             }
+            return user.Id;
         }
 
         private IdentityUser MapToUser(Shared.Users.AddUser.AddUserVm source)
@@ -44,6 +40,15 @@ namespace DailyRutine.Application.Users.AddUser
             user.UserName = source.UserName;
             user.Email = source.Email;
             return user;
+        }
+
+        private Exception MapException(IdentityError err)
+        {
+            switch(err.Code)
+            {
+                case "DuplicateUserName": { return new Shared.Exceptions.Error400Exception(err.Description); }
+                default: { return new Exception($"Error code: {err.Code}\n Error message: {err.Description}\n"); }
+            }
         }
     }
 }
