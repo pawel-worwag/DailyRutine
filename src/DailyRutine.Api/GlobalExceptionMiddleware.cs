@@ -26,6 +26,12 @@ namespace DailyRutine.Api
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 await context.Response.WriteAsJsonAsync(ex.Message);
             }
+            catch(Error404Exception ex)
+            {
+                _logger.LogError($"[{context.TraceIdentifier}] {ex.Message}");
+                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                await context.Response.WriteAsJsonAsync(ex.Message);
+            }
             catch (Exception ex)
             {
                 _logger.LogError($"[{context.TraceIdentifier}] {ex.Message}");
