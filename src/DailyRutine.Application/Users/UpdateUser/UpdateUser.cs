@@ -44,7 +44,8 @@ namespace DailyRutine.Application.Users.UpdateUser
         {
             switch (err.Code)
             {
-                case "DuplicateUserName": { return new Error400Exception(err.Description); }
+                case "DuplicateUserName":
+                case "InvalidUserName": { return new Shared.Exceptions.Error400Exception(err.Description); }
                 default: { return new Exception($"Error code: {err.Code}\n Error message: {err.Description}\n"); }
             }
         }
