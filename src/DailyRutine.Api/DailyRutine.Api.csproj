@@ -28,11 +28,15 @@
     <ProjectReference Include="..\DailyRutine.Persistance\DailyRutine.Persistance.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="DailyRutine.Shared\DailyRutine.Shared.csproj">
+    <ProjectReference Include="..\DailyRutine.Shared\DailyRutine.Shared.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>

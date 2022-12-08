@@ -7,4 +7,18 @@
     <RootNamespace>DailyRutine.Shared</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Users\" />
+    <None Remove="Users\GetUsers\" />
+    <None Remove="Users\AddUser\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Users\UpdateUser\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Users\" />
+    <Folder Include="Users\GetUsers\" />
+    <Folder Include="Users\AddUser\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Users\UpdateUser\" />
+  </ItemGroup>
 </Project>
