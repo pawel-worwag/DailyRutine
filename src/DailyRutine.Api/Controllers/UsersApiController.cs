@@ -25,6 +25,13 @@ namespace DailyRutine.Api.Controllers
         {
             return await _mediator.Send(new Application.Users.AddUser.AddUserRequest() { Dto = dto });
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(string id, Shared.Users.UpdateUser.UpdateUserVm dto)
+        {
+            await _mediator.Send(new Application.Users.UpdateUser.UpdateUserRequest() { UserId = id, Dto = dto });
+            return Ok();
+        }
     }
 }
 
