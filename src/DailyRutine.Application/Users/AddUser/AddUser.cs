@@ -21,7 +21,7 @@ namespace DailyRutine.Application.Users.AddUser
 
         public async Task<string> Handle(AddUserRequest request, CancellationToken cancellationToken)
         {
-            if (request.Dto is null) { throw new ArgumentNullException("User dto in null"); }
+            if (request.Dto is null) { throw new ArgumentNullException("Dto","User dto is null."); }
             IdentityUser user = MapToUser(request.Dto);
             var result = await userManager.CreateAsync(user);
             if(!result.Succeeded)
