@@ -22,12 +22,20 @@
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <None Remove="Users\AddUser\" />
     <None Remove="Users\UpdateUser\" />
+    <None Remove="Auth\" />
+    <None Remove="Auth\Login\" />
+    <None Remove="Microsoft.IdentityModel.JsonWebTokens" />
+    <None Remove="System.IdentityModel.Tokens.Jwt" />
+    <None Remove="Options\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
     <Folder Include="Users\GetUsers\" />
     <Folder Include="Users\AddUser\" />
     <Folder Include="Users\UpdateUser\" />
+    <Folder Include="Auth\" />
+    <Folder Include="Auth\Login\" />
+    <Folder Include="Options\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="11.1.0" />
@@ -36,5 +44,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.25.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
   </ItemGroup>
 </Project>

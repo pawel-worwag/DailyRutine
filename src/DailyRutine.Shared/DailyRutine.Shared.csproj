@@ -13,6 +13,8 @@
     <None Remove="Users\AddUser\" />
     <None Remove="Exceptions\" />
     <None Remove="Users\UpdateUser\" />
+    <None Remove="Auth\" />
+    <None Remove="Auth\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
@@ -20,5 +22,7 @@
     <Folder Include="Users\AddUser\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Users\UpdateUser\" />
+    <Folder Include="Auth\" />
+    <Folder Include="Auth\Login\" />
   </ItemGroup>
 </Project>

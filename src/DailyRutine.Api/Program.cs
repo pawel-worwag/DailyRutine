@@ -1,6 +1,8 @@
 ﻿using DailyRutine.Api;
 using DailyRutine.Application;
+using DailyRutine.Application.Options;
 using DailyRutine.Persistance;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,9 @@ builder.Services.AddPersistenceLayer(builder.Configuration);
 builder.Services.AddApplicationLayer();
 
 builder.Services.AddControllers();
+
+
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JwtOptions"));
 
 var app = builder.Build();
 
