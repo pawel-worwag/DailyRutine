@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using DailyRutine.Application.Options;
+using DailyRutine.Domain;
 using DailyRutine.Shared.Auth.Login;
 using DailyRutine.Shared.Exceptions;
 using MediatR;
@@ -19,10 +20,10 @@ namespace DailyRutine.Application.Auth.Login
 
     public class LoginRequestHandler : IRequestHandler<LoginRequest, LoginResponseDto>
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
         private readonly JwtOptions _jwtOptions;
 
-        public LoginRequestHandler(UserManager<IdentityUser> userManager, IOptions<JwtOptions> jwtOptions)
+        public LoginRequestHandler(UserManager<User> userManager, IOptions<JwtOptions> jwtOptions)
         {
             _userManager = userManager;
             _jwtOptions = jwtOptions.Value;
@@ -31,7 +32,7 @@ namespace DailyRutine.Application.Auth.Login
         public async Task<LoginResponseDto> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
             if (request.Dto is null) { throw new ArgumentNullException("Dto", "User dto is null."); }
-            IdentityUser? user = await _userManager.FindByNameAsync(request.Dto.UserName);
+            User? user = await _userManager.FindByNameAsync(request.Dto.UserName);
             if (user is null) { throw new Error400Exception("Bad username or password."); }
             var passwordValid = await _userManager.CheckPasswordAsync(user, request.Dto.Password);
             if(passwordValid != true) { throw new Error400Exception("Bad username or password."); }
@@ -41,7 +42,7 @@ namespace DailyRutine.Application.Auth.Login
             return new LoginResponseDto() { UserId = user.Id, Email = user.Email, Token = tokenString };
         }
 
-        private async Task<string> GenerateToken(IdentityUser user)
+        private async Task<string> GenerateToken(User user)
         {
             var roles = await _userManager.GetRolesAsync(user);
             var roleClaims = roles.Select(q => new Claim(ClaimTypes.Role, q)).ToList();

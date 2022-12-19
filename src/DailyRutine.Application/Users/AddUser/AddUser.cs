@@ -1,4 +1,5 @@
 ﻿using System;
+using DailyRutine.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -12,9 +13,9 @@ namespace DailyRutine.Application.Users.AddUser
 
     public class AddUserRequestHandler : IRequestHandler<AddUserRequest, string>
     {
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<User> userManager;
 
-        public AddUserRequestHandler(UserManager<IdentityUser> userManager)
+        public AddUserRequestHandler(UserManager<User> userManager)
         {
             this.userManager = userManager;
         }
@@ -22,7 +23,7 @@ namespace DailyRutine.Application.Users.AddUser
         public async Task<string> Handle(AddUserRequest request, CancellationToken cancellationToken)
         {
             if (request.Dto is null) { throw new ArgumentNullException("Dto","User dto is null."); }
-            IdentityUser user = MapToUser(request.Dto);
+            User user = MapToUser(request.Dto);
             var result = await userManager.CreateAsync(user);
             if(!result.Succeeded)
             {
@@ -34,9 +35,9 @@ namespace DailyRutine.Application.Users.AddUser
             return user.Id;
         }
 
-        private IdentityUser MapToUser(Shared.Users.AddUser.AddUserVm source)
+        private User MapToUser(Shared.Users.AddUser.AddUserVm source)
         {
-            IdentityUser user = new IdentityUser();
+            User user = new User();
             user.UserName = source.UserName;
             user.Email = source.Email;
             return user;

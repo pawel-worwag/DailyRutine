@@ -3,6 +3,7 @@ using MediatR;
 using DailyRutine.Shared.Users.UpdateUser;
 using Microsoft.AspNetCore.Identity;
 using DailyRutine.Shared.Exceptions;
+using DailyRutine.Domain;
 
 namespace DailyRutine.Application.Users.UpdateUser
 {
@@ -14,9 +15,9 @@ namespace DailyRutine.Application.Users.UpdateUser
     public class UpdateUserRequestHandler : IRequestHandler<UpdateUserRequest>
     {
 
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
 
-        public UpdateUserRequestHandler(UserManager<IdentityUser> userManager)
+        public UpdateUserRequestHandler(UserManager<User> userManager)
         {
             _userManager = userManager;
         }
@@ -25,7 +26,7 @@ namespace DailyRutine.Application.Users.UpdateUser
         {
             if(string.IsNullOrEmpty(request.UserId)) { throw new ArgumentNullException("UserId", "User id is null or empty."); }
             if (request.Dto is null) { throw new ArgumentNullException("Dto","User dto is null."); }
-            IdentityUser? user = await _userManager.FindByIdAsync(request.UserId);
+            User? user = await _userManager.FindByIdAsync(request.UserId);
             if (user is null) { throw new Error404Exception("User not found."); }
             user.UserName = request.Dto.UserName;
             user.Email = request.Dto.Email;
