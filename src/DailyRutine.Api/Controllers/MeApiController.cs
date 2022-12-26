@@ -9,7 +9,7 @@ namespace DailyRutine.Api.Controllers
         [HttpGet]
         public IActionResult GetProfile()
         {
-            return Ok($"Authenticated: {HttpContext.User.Identity.IsAuthenticated}; Name: {HttpContext.User.Identity.IsAuthenticated}");
+            return Ok($"Authenticated: {HttpContext.User.Identity.IsAuthenticated}; Name: {HttpContext.User.Identity.Name}");
         }
     }
 }
