@@ -27,6 +27,8 @@
     <None Remove="Microsoft.IdentityModel.JsonWebTokens" />
     <None Remove="System.IdentityModel.Tokens.Jwt" />
     <None Remove="Options\" />
+    <None Remove="Me\" />
+    <None Remove="Me\GetProfile\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
@@ -36,6 +38,8 @@
     <Folder Include="Auth\" />
     <Folder Include="Auth\Login\" />
     <Folder Include="Options\" />
+    <Folder Include="Me\" />
+    <Folder Include="Me\GetProfile\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="11.1.0" />
