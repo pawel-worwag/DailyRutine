@@ -17,6 +17,8 @@
     <None Remove="Auth\Login\" />
     <None Remove="Me\" />
     <None Remove="Me\GetProfile\" />
+    <None Remove="Environment\" />
+    <None Remove="Environment\GetAllTimeZones\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
@@ -28,5 +30,7 @@
     <Folder Include="Auth\Login\" />
     <Folder Include="Me\" />
     <Folder Include="Me\GetProfile\" />
+    <Folder Include="Environment\" />
+    <Folder Include="Environment\GetAllowedTimeZones\" />
   </ItemGroup>
 </Project>
