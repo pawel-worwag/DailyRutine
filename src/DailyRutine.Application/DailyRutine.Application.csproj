@@ -30,6 +30,7 @@
     <None Remove="Me\" />
     <None Remove="Me\GetProfile\" />
     <None Remove="Environment\" />
+    <None Remove="Me\SetProfile\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />
@@ -42,6 +43,7 @@
     <Folder Include="Me\" />
     <Folder Include="Me\GetProfile\" />
     <Folder Include="Environment\" />
+    <Folder Include="Me\SetProfile\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="11.1.0" />

@@ -23,6 +23,15 @@ namespace DailyRutine.Api.Controllers
             var uid = HttpContext.User.FindFirstValue("uid");
             return await _mediator.Send(new Application.Me.GetProfile.GetProfileRequest() { Id = uid});
         }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> SetProfile(Shared.Me.SetProfile.ProfileDto profile)
+        {
+            var uid = HttpContext.User.FindFirstValue("uid");
+            await _mediator.Send(new Application.Me.SetProfile.SetProfileRequest() { Id = uid, TimezoneId = profile.TimezoneId  });
+            return Ok();
+        }
     }
 }
 
